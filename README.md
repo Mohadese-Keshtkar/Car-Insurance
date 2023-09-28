@@ -1,4 +1,4 @@
-# Car-Insurance🚗
+# Car-Insurance <img align="center" width="50px" src="img/calogo.jfif"> 
 
 ## About the project:
   
@@ -15,8 +15,6 @@
 `4- Finally, click on the price calculation button to get an invoice for you`
 
 ---
-<img align="center" width="200px" src="img/calogo.jfif">
-
 #### Programming languages ​​used in this project:
 ##### HTML
 ##### CSS 
