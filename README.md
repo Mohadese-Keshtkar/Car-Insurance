@@ -15,6 +15,8 @@
 `4- Finally, click on the price calculation button to get an invoice for you`
 
 ---
+<img align="right" width="100px" src="img/calogo.jfif">
+
 #### Programming languages ​​used in this project:
 ##### HTML
 ##### CSS 
