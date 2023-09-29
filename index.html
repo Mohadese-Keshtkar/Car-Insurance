@@ -10,7 +10,94 @@
 </head>
 
 <body>
+    <!-- Container [START] -->
+    <div class="container">
+        <!-- Content [START] -->
+        <div class="content">
+            <div class="header">
+                <h1>محاسبه آنلاین قیمت بیمه خودرو</h1>
+            </div>
+            <form class="contentList" action="#">
+                <!-- car model [START]-->
+                <div class="CarModel">
+                    <label class="model">مدل خودرو :</label>
+                    <!-- Options car [START] -->
+                    <div class="car-Option">
+                        <select name="" id="boxOptions">
+                            <option value="1.15">
+                                ساینا
+                            </option>
+                            <option value="2.5">
+                                شاهین
+                            </option>
+                            <option value="4.25">
+                                ولستر
+                            </option>
+                            <option value="1">
+                                برلیانس
+                            </option>
+                            <option value="2">
+                                پراید
+                            </option>
+                            <option value="4">
+                                207
+                            </option>
+                        </select>
+                    </div>
+                    <!-- Options car [END] -->
+                </div>
+                <!-- car model [END]-->
 
+                <!-- Year of construction [START] -->
+                <div class="yearCar">
+                    <label class="salSakht">سال ساخت :</label>
+                    <div class="optionsYear">
+                        <select name="" id="years">
+                            <option value="1402">1402</option>
+                            <option value="1401">1401</option>
+                            <option value="1400">1400</option>
+                            <option value="1399">1399</option>
+                            <option value="1398">1398</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Year of construction [END] -->
+
+                <!-- Insurance Type [START] -->
+                <div class="insuranceType">
+                    <legend>نوع بیمه</legend>
+                    <!-- content-insuranceType [START] -->
+                    <div class="content-insuranceType">
+                        <label class="simple">
+                            <input type="radio" value="simpleV" name="insurance" checked>
+                            ساده - شخص ثالث
+                        </label>
+                    </div>
+                    <!-- content-insuranceType [END] -->
+                    <div>
+                        <label class="Full" for="">
+                            <input type="radio" value="fully" name="insurance">
+                            کامل - شخص ثالث با بیمه بدنه
+                        </label>
+
+                    </div>
+                </div>
+                <!-- Insurance Type [END] -->
+            </form>
+
+            <!-- submit [START] -->
+            <div class="submitBtn">
+                <button type="submit"> محاسبه قیمت </button>
+            </div>
+            <!-- submit [END] -->
+
+        </div>
+        <!-- Content [END] -->
+    </div>
+    <!-- Container [END] -->
+
+
+    <script src="app.js"></script>
 </body>
 
 </html>
