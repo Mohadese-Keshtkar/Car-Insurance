@@ -29,9 +29,9 @@ function submitForm(e) {
     const level = document.querySelector("input[name='insurance']:checked")
 
     if (make === "" || years === "" || level === "") {
-        console.log('Error:)')
+        alert('مدل خودرو را انتخاب کنید❌')
     } else {
-        console.log('AllRight')
+        alert('ثبت شد✅')
     }
 }
 
