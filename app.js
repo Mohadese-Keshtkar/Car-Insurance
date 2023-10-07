@@ -88,7 +88,6 @@ function yearsFunction() {
     tagOption.innerText = `انتخاب`
     tagOption.value = "";
 
-
     //create option for loop
     for (let i = maxYear; i >= minYear; i--) {
         // creat tag 
@@ -98,6 +97,13 @@ function yearsFunction() {
 
         //append option tag
         selectYear.appendChild(tagOption)
+
+
+        let maxYear = fixNumbers(curentYear)
+        // console.log(maxYear);
+
+        // get min year
+        let minYear = maxYear - 20
 
     }
 }

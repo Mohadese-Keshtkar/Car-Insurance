@@ -104,7 +104,6 @@ legend {
 
 .submitBtn button {
     width: 80%;
-    margin-right: 40px;
     background-color: rgb(132, 132, 255);
     border: none;
     padding: 16px;
@@ -114,11 +113,14 @@ legend {
     border-radius: 26px;
     transition: 0.1s;
     cursor: pointer;
-    margin-bottom: 60px;
 }
 
 .submitBtn button:hover {
     background-color: rgb(169, 169, 245);
 }
 
-form .submitBtn {}
+form .submitBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
