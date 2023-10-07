@@ -16,6 +16,28 @@
 
 
 
+const form = document.querySelector(".contentList")
+document.addEventListener("DOMContentLoaded", afterLoad)
+document.addEventListener("submit", submitForm)
+
+
+function submitForm(e) {
+    e.preventDefault() // Prevent page refresh
+
+    const make = document.querySelector("#boxOptions").value
+    const years = document.querySelector("#years").value
+    const level = document.querySelector("input[name='insurance']:checked")
+
+    if (make === "" || years === "" || level === "") {
+        console.log('Error:)')
+    } else {
+        console.log('AllRight')
+    }
+}
+
+function afterLoad() {
+    yearsFunction()
+}
 
 
 function yearsFunction() {
@@ -51,14 +73,21 @@ function yearsFunction() {
 
     //get max year
     let maxYear = fixNumbers(curentYear)
-
     console.log(maxYear)
 
 
     //get min year
     let minYear = maxYear - 20
     console.log(minYear)
+
+    // access to the select tag
     const selectYear = document.querySelector('#years')
+
+    //  Create firs option for makeTag
+    const tagOption = document.createElement('option')
+    tagOption.innerText = `انتخاب`
+    tagOption.value = "";
+
 
     //create option for loop
     for (let i = maxYear; i >= minYear; i--) {
@@ -69,6 +98,7 @@ function yearsFunction() {
 
         //append option tag
         selectYear.appendChild(tagOption)
+
     }
 }
 
