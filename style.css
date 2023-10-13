@@ -128,10 +128,7 @@ legend {
 
 .submitBtn {
     margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    margin-right: 60px;
 }
 
 .error {
