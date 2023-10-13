@@ -110,7 +110,7 @@ legend {
 }
 
 .submitBtn button {
-    width: 80%;
+    width: 88%;
     background-color: rgb(132, 132, 255);
     border: none;
     padding: 16px;
@@ -128,7 +128,7 @@ legend {
 
 .submitBtn {
     margin-bottom: 30px;
-    margin-right: 60px;
+    margin-right: 35px;
 }
 
 .error {
