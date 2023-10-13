@@ -21,7 +21,6 @@ body {
     margin-top: 100px;
     border-radius: 30px;
     box-shadow: 3px 3px 5px 1px rgb(134, 133, 133);
-    padding-bottom: 45px;
 }
 
 .header {
@@ -49,7 +48,6 @@ body {
 .insuranceType {
     padding: 18px 18px;
     color: rgb(32, 32, 32);
-    padding-bottom: 45px;
 }
 
 .contentList {
@@ -58,7 +56,7 @@ body {
     width: 350px;
     height: 400px;
     position: relative;
-
+    padding-bottom: 20px;
 }
 
 .model {
@@ -110,10 +108,11 @@ legend {
 }
 
 .submitBtn button {
-    width: 80%;
+    margin-top: 15px;
+    /* width: 80%; */
     background-color: rgb(132, 132, 255);
     border: none;
-    padding: 16px;
+    padding: 13px 60px;
     color: white;
     font-size: 19px;
     font-weight: 600;
@@ -128,6 +127,7 @@ legend {
 
 form .submitBtn {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
