@@ -1,13 +1,16 @@
+:root {
+    --hotPurple: rgb(158, 128, 255);
+}
+
+
 body {
-    direction: rtl;
     background-color: rgb(157, 157, 255);
     font-family: 'tahoma';
 }
 
 ::selection {
     color: #fff;
-    background-color: rgb(158, 128, 255);
-
+    background-color: var(--hotPurple);
 }
 
 .container {
@@ -24,7 +27,7 @@ body {
 }
 
 .header {
-    background-color: rgb(158, 128, 255);
+    background-color: var(--hotPurple);
     padding: 23px;
     text-transform: uppercase;
     color: white;

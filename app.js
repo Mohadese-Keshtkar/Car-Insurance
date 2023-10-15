@@ -1,4 +1,5 @@
-// selected Form
+// Variables
+
 const form = document.querySelector(".contentList")
 
 // Information storage (car base price and coefficient) :
@@ -16,17 +17,12 @@ const config = {
     complete: 1.5,
 };
 
-
-//Events
-
-// this Event for better loadeing js code...
-document.addEventListener("DOMContentLoaded", afterLoad)
-
-// submit function for  Car Insurance form  
-document.addEventListener("submit", submitForm)
+// Events
+document.addEventListener('DOMContentLoaded', afterLoad)
+document.addEventListener('submit', submitForm)
 
 
-// loadeing Function
+// Function
 function afterLoad() {
     // get the current year and fix it
     fixNumbers(currentYearr());
@@ -35,34 +31,37 @@ function afterLoad() {
 
 // submit form
 function submitForm(e) {
-    // Prevent page refresh
     e.preventDefault()
 
-    const make = document.querySelector("#boxOptions").value
-    const year = document.querySelector("#years").value
-    const level = document.querySelector("input[name='insurance']:checked")
+    const make = document.querySelector('#boxOptions').value
+    const year = document.querySelector('#year').value
+    const level = document.querySelector('input[name="level"]:checked')
 
-    if (make === "" || years === "" || level === "") {
+    if (make === "" || year === "" || level === "") {
         displayMsg('مدل خودرو را انتخاب کنید')
     } else {
         alert('ثبت شد✅')
 
+        // console.log(insuranceCase(make, years, level))
+
+        // STEP1: get info
         let insuranceCase = {
             make: make,
             year: year,
             level: level
-
         }
 
-        // calculate : show result message box
-
+        // STEP2: calculate
         calculaterPrice(insuranceCase)
 
+        // STEP3: show result message box
+
     }
+
 }
 
-
 // Price calculation function
+
 function calculaterPrice(info) {
     // variables
     let price = config.price;
@@ -81,7 +80,6 @@ function calculaterPrice(info) {
 
     // + Calculate the price based on the level chosen by user
     price = calLevel(info.level, price);
-
 }
 
 // year diffrence
@@ -110,7 +108,6 @@ function calMake(chosenMake, price) {
             return (price = basePrice * make2);
         case "3":
             return (price = basePrice * make3);
-
     }
 }
 
@@ -132,32 +129,32 @@ function calLevel(chosenLevel, price) {
 // Display message box
 
 function displayMsg(msg) {
-    // craete message box
+    // create message box
     const messageBox = document.createElement("div");
-    messageBox.classList = "error"
+    messageBox.classList = "error";
     messageBox.innerText = msg;
 
-    // show message 
-    form.insertBefore(messageBox, document.querySelector('.CarModel'));
+    // show message
+    form.insertBefore(messageBox, document.querySelector(".CarModel"));
 
     // remove message box
     setTimeout(() => {
-        document.querySelector(".error")
-    }, 5000)
+        document.querySelector(".error").remove();
+    }, 5000);
 }
 
-// get the current year 
+// get the current year
 
 function currentYearr() {
-    let curentYear = new Date().toLocaleDateString("fa-IR")
+    let curentYear = new Date().toLocaleDateString("fa-IR");
 
-    // slice date
+    // Slice date
     curentYear = curentYear.slice(0, 4);
 
-    // get max year 
+    // get max year
     let maxYear = fixNumbers(curentYear);
-    // previous
-    preYears = (maxYear);
+    // previous years
+    preYears(maxYear);
     return maxYear;
 }
 
@@ -198,20 +195,19 @@ function fixNumbers(str) {
     return parseInt(str);
 }
 
-
 // previous years
 // show previous years based on the current year
 
-function preYears() {
-    // get min year 
-    let minYear = minYear - 20;
+function preYears(maxYear) {
+    // get min year
+    let minYear = maxYear - 20;
 
     // create first option tag for title
-    optionMaker("", `انتخاب`)
+    optionMaker("", `انتخاب`);
 
     // create a for loop for making all the option tags
     for (let i = maxYear; i >= minYear; i--) {
-        optionMaker(i, ` سال ${i}`)
+        optionMaker(i, `سال ${i}`);
     }
 }
 
@@ -221,11 +217,11 @@ function optionMaker(optValue, optText) {
     // access to the select tag
     const yearSelectTag = document.querySelector("#year");
 
-    // create option tag 
+    // create option tag
     const optionTag = document.createElement("option");
-    optionTag.value = optValue;;
-    optionTag.innerText = optText
+    optionTag.value = optValue;
+    optionTag.innerText = optText;
 
     // append option to the selectYear
-    yearSelectTag.appendChild(optionTag)
+    yearSelectTag.appendChild(optionTag);
 }
