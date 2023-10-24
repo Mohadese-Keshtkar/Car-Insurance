@@ -21,14 +21,14 @@ body {
 
 .content {
     background-color: white;
-    margin-top: 100px;
+    margin-top: 50px;
     border-radius: 30px;
     box-shadow: 3px 3px 5px 1px rgb(134, 133, 133);
 }
 
 .header {
     background-color: var(--hotPurple);
-    padding: 23px;
+    padding: 21px;
     text-transform: uppercase;
     color: white;
     font-weight: bold;
@@ -36,14 +36,14 @@ body {
 }
 
 .header h1 {
-    font-size: 21px;
+    font-size: 20px;
     margin: 0;
     text-align: center;
 }
 
 .yearCar,
 .CarModel {
-    color: rgb(32, 32, 32);
+    color: rgb(19, 18, 18);
     padding: 15px 15px;
     border-bottom: 1px solid lightgray;
 }
@@ -55,17 +55,15 @@ body {
 }
 
 .contentList {
-    margin-top: 10px;
     margin-bottom: 20px;
     padding: 10px;
     width: 370px;
-    height: 400px;
     position: relative;
 
 }
 
 .model {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 800;
     opacity: 0.7;
 
@@ -74,7 +72,6 @@ body {
 #years,
 #boxOptions {
     font-size: 14px;
-    font-weight: 600;
     color: rgb(48, 61, 72);
 }
 
@@ -87,7 +84,7 @@ body {
 
 .salSakht {
     display: inline-block;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 900;
     margin-top: 10px;
     opacity: 0.7;
@@ -95,30 +92,34 @@ body {
 
 legend {
     font-weight: 900;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 5px;
 }
 
 .simple {
     display: inline-block;
-    margin-top: 18px;
+    margin-top: 16px;
     margin-bottom: 10px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
+}
+
+.insuranceType {
+    color: rgb(50, 48, 48);
 }
 
 .Full {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .submitBtn button {
-    width: 80%;
-    background-color: rgb(132, 132, 255);
+    width: 70%;
+    background-color: rgba(147, 107, 249, 0.989);
     border: none;
     padding: 16px;
     color: white;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 600;
     border-radius: 26px;
     transition: 0.1s;
@@ -126,7 +127,7 @@ legend {
 }
 
 .submitBtn button:hover {
-    background-color: rgb(169, 169, 245);
+    background-color: rgb(175, 148, 237);
 }
 
 .submitBtn {
@@ -146,4 +147,34 @@ legend {
     width: 180px;
     color: rgb(235, 89, 89);
     background: rgba(255, 217, 217, 0.751);
+}
+
+#loading img {
+    display: none;
+    margin: 0 auto;
+    width: 150px;
+    margin-top: -20px;
+}
+
+form #loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#result .header {
+    margin-top: -1px;
+    padding: 13px;
+    background-color: var(--hotPurple);
+}
+
+#result div {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 28px;
+    border-top-left-radius: 28px;
+    text-align: center;
+    border: 1px solid rgb(49, 49, 49);
+    margin-bottom: 13px;
 }

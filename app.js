@@ -1,21 +1,7 @@
 // Variables
-
 const form = document.querySelector(".contentList")
+const html = new HTMLUI()
 
-// Information storage (car base price and coefficient) :
-
-// Note: The configuration can be easily changed
-const config = {
-    price: 0,
-    basePrice: 2000000,
-    make1: 1.15,
-    make2: 1.3,
-    make3: 1.8,
-    // 30%
-    basic: 1.3,
-    // 50%
-    complete: 1.5,
-};
 
 // Events
 document.addEventListener('DOMContentLoaded', afterLoad)
@@ -25,7 +11,7 @@ document.addEventListener('submit', submitForm)
 // Function
 function afterLoad() {
     // get the current year and fix it
-    fixNumbers(currentYearr());
+    html.displayYears()
 }
 
 
@@ -40,7 +26,7 @@ function submitForm(e) {
     if (make === "" || year === "" || level === "") {
         displayMsg('مدل خودرو را انتخاب کنید')
     } else {
-        alert('ثبت شد✅')
+        console.log('ثبت شد✅')
 
         // console.log(insuranceCase(make, years, level))
 
@@ -51,10 +37,10 @@ function submitForm(e) {
             level: level
         }
 
-        // STEP2: calculate
-        calculaterPrice(insuranceCase)
 
         // STEP3: show result message box
+        const insurance = new InsuranceProccess(make, year, level)
+        html.showResult(insurance.calculatePrice(insuranceCase), insuranceCase)
 
     }
 
