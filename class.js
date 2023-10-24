@@ -86,7 +86,6 @@ class InsuranceProccess {
         */
 
         if (level == 'basic') {
-            // price = price + (price * 0.3)
             price = price * 1.3
         } else {
             price = price * 1.5
@@ -108,7 +107,7 @@ class HTMLUI {
         messageBox.innerText = msg
 
         // show message
-        form.insertBefore(messageBox, document.querySelector('.carModel'))
+        form.insertBefore(messageBox, document.querySelector('.CarModel'))
 
         // remove message box
         setTimeout(() => {
