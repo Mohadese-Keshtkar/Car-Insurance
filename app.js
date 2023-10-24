@@ -45,3 +45,9 @@ function submitForm(e) {
     }
 
 }
+
+
+let config = {
+    complete: 1.5,
+    basic: 1.3,
+}

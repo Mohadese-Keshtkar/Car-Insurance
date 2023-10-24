@@ -85,10 +85,11 @@ class InsuranceProccess {
             complete=>  increase 50%
         */
 
+
         if (level == 'basic') {
-            price = price * 1.3
+            price = price * config.basic
         } else {
-            price = price * 1.5
+            price = price * config.complete
         }
 
         return price
@@ -174,11 +175,7 @@ class HTMLUI {
 
         // convert make value to the car name
         let make = info.make
-        /* 
-        make:1      =>      1.15
-        make:2      =>      1.30
-        make:3      =>      1.80
-        */
+
         switch (make) {
             case '1':
                 make = 'ساینا';
